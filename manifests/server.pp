@@ -18,9 +18,9 @@ class graylog::server(
     fail('Missing "password_secret" config setting!')
   }
   if has_key($config, 'root_password_sha2') {
-    if length($config['root_password_sha2']) < 64 {
-      fail('The root_password_sha2 parameter does not look like a SHA256 checksum!')
-    }
+    #if length($config['root_password_sha2']) < 64 {
+    #  fail('The root_password_sha2 parameter does not look like a SHA256 checksum!')
+    #}
   } else {
     fail('Missing "root_password_sha2" config setting!')
   }
